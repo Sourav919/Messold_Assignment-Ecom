@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        
+        <nav class="navbar">
+            
+            <div class="top-section">
+                <span class="discount-text">10% OFF using MESSOLD</span>
+            </div>
+            <div class="bottom-section">
+                <div class="left-menu">
+                    
+                    <ul>
+                        <div class="logo">MESSOLD</div>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="products.html">Home Decor</a></li>
+                        <li><a href="products.html">Festive Decor</a></li>
+                        <li><a href="products.html">Corporate Gifting</a></li>
+                    </ul>
+                </div>
+                <div class="right-menu">
+                    <ul>
+                        <li></li>
+                            <a href="#" class="icon" id="search-icon">
+                                <img src="search.jpg" alt="Search" />
+                            </a>
+                            <form class="search-bar" id="search-bar" action="/search" method="GET" style="display: none;">
+                                <input type="text" placeholder="Search products..." name="query" />
+                                <button type="submit">Search</button>
+                            </form>
+                        </li>
+                        <li><a href="#" class="icon" id="cartIcon"><img src="cart.png" alt="Cart" /></a></li>
+                        <li><a href="login.html" class="icon"><img src="account.png" alt="Account" /></a></li>
+                        
+                        
+                        
+                        <li><a href="#" class="icon"><img src="wishlist.png" alt="Wishlist" /></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+    </header>
+
+    <!-- Hero Section -->
+   <!-- Hero Section (with sliding images) -->
+   <section class="hero">
+    
+
+    <!-- Add Video Here -->
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="hero.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+<div class="category-slider">
+    <button class="prev">&#10094;</button>
+    <div class="category-wrapper">
+        <ul class="categories">
+            <li class="category-item">
+                <a href="products.html" target="_blank">
+                    <img src="1.jpeg" alt="Pooja Thali">
+                    <span>Pooja Thali</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a href="products.html" target="_blank">
+                    <img src="2.jpeg" alt="Citrine">
+                    <span>Citrine</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a href="products.html" target="_blank">
+                    <img src="3.jpeg" alt="Rose Quartz">
+                    <span>Rose Quartz</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a href="products.html" target="_blank">
+                    <img src="4.jpeg" alt="Amethyst">
+                    <span>Amethyst</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a href="products.html" target="_blank">
+                    <img src="1.jpeg" alt="Bracelets">
+                    <span>Bracelets</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a href="products.html" target="_blank">
+                    <img src="2.jpeg" alt="Evil Eye">
+                    <span>Evil Eye</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a href="products.html" target="_blank">
+                    <img src="3.jpeg" alt="Pyrite">
+                    <span>Pyrite</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a href="products.html" target="_blank">
+                    <img src="4.jpeg" alt="Moonstone">
+                    <span>Moonstone</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a href="products.html" target="_blank">
+                    <img src="4.jpeg" alt="Moonstone">
+                    <span>Moonstone</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a href="products.html" target="_blank">
+                    <img src="4.jpeg" alt="Moonstone">
+                    <span>Moonstone</span>
+                </a>
+            </li>
+            <li class="category-item">
+                <a href="products.html" target="_blank">
+                    <img src="4.jpeg" alt="Moonstone">
+                    <span>Moonstone</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <button class="next">&#10095;</button>
+</div>
+
+
+
+    <!-- Products Section -->
+    <section class="products">
+        <!-- 1st Category -->
+        <h3>1st Category</h3>
+        <div class="product-grid">
+            <div class="product-card" data-id="1" data-name="Pooja Thali" data-price="15">
+                <img src="1.jpeg" alt="Pooja Thali">
+                <h3>Pooja Thali</h3>
+                <p>$15</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="2" data-name="prod2" data-price="50">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>prod2</h3>
+                <p>$50</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="3" data-name="prod3" data-price="12">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>prod3</h3>
+                <p>$12</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="4" data-name="prod4" data-price="34">
+                <img src="2.jpeg" alt="prod4">
+                <h3>prod4</h3>
+                <p>$34</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="5" data-name="prod5" data-price="44">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>prod5</h3>
+                <p>$44</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Add more products for this category -->
+        </div>
+
+        <!-- 2nd Category -->
+        <h3>2nd Category</h3>
+        <div class="product-grid">
+            <div class="product-card" data-id="6" data-name="prod6" data-price="15">
+                <img src="1.jpeg" alt="Pooja Thali">
+                <h3>prod6</h3>
+                <p>$15</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="7" data-name="prod7" data-price="5">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>prod7</h3>
+                <p>$5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="8" data-name="prod8" data-price="5">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>prod8</h3>
+                <p>$5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="9" data-name="prod9" data-price="5">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>prod9</h3>
+                <p>$5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="10" data-name="prod10" data-price="5">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>prod10</h3>
+                <p>$5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Add more products for this category -->
+        </div>
+        <!-- 3rd Category -->
+        <h3>3rd Category</h3>
+        <div class="product-grid">
+            <div class="product-card" data-id="11" data-name="prod11" data-price="15">
+                <img src="1.jpeg" alt="Pooja Thali">
+                <h3>prod11</h3>
+                <p>$15</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="12" data-name="prod12" data-price="22">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>prod12</h3>
+                <p>$22</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="13" data-name="prod13" data-price="15">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>prod13</h3>
+                <p>$15</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="14" data-name="prod14" data-price="52">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>prod14</h3>
+                <p>$52</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="15" data-name="prod15" data-price="54">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>prod15</h3>
+                <p>$54</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Add more products for this category -->
+        </div>
+
+         <!-- 3rd Category -->
+         <h3>4th Category</h3>
+         <div class="product-grid">
+             <div class="product-card" data-id="16" data-name="Prod16" data-price="15">
+                 <img src="1.jpeg" alt="Pooja Thali">
+                 <h3>prod16</h3>
+                 <p>$15</p>
+                 <button class="add-to-cart">Add to Cart</button>
+             </div>
+             <div class="product-card" data-id="17" data-name="Prod17" data-price="5">
+                 <img src="2.jpeg" alt="Incense Sticks">
+                 <h3>prod17</h3>
+                 <p>$5</p>
+                 <button class="add-to-cart">Add to Cart</button>
+             </div>
+             <div class="product-card" data-id="18" data-name="prod18" data-price="5">
+                 <img src="2.jpeg" alt="Incense Sticks">
+                 <h3>prod18</h3>
+                 <p>$5</p>
+                 <button class="add-to-cart">Add to Cart</button>
+             </div>
+             <div class="product-card" data-id="19" data-name="prod19" data-price="5">
+                 <img src="2.jpeg" alt="Incense Sticks">
+                 <h3>prod19</h3>
+                 <p>$5</p>
+                 <button class="add-to-cart">Add to Cart</button>
+             </div>
+             <div class="product-card" data-id="20" data-name="prod20" data-price="5">
+                 <img src="2.jpeg" alt="Incense Sticks">
+                 <h3>prod20</h3>
+                 <p>$5</p>
+                 <button class="add-to-cart">Add to Cart</button>
+             </div>
+             <!-- Add more products for this category -->
+         </div>
+
+          <!-- 3rd Category -->
+        <h2>5th Category</h2>
+        <div class="product-grid">
+            <div class="product-card" data-id="1" data-name="Pooja Thali" data-price="15">
+                <img src="1.jpeg" alt="Pooja Thali">
+                <h3>Pooja Thali</h3>
+                <p>$15</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="2" data-name="Incense Sticks" data-price="5">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>Incense Sticks</h3>
+                <p>$5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="2" data-name="Incense Sticks" data-price="5">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>Incense Sticks</h3>
+                <p>$5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="2" data-name="Incense Sticks" data-price="5">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>Incense Sticks</h3>
+                <p>$5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="2" data-name="Incense Sticks" data-price="5">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>Incense Sticks</h3>
+                <p>$5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Add more products for this category -->
+        </div>
+    </section>
+
+    <!-- Cart Sidebar (hidden) -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button id="close-cart">&times;</button>
+        </div>
+        <div class="cart-body">
+            <ul id="cart-items-sidebar"></ul>
+        </div>
+        <div class="cart-footer">
+            <div>Total: $<span id="total-amount-sidebar">0</span></div>
+            <button id="checkout-sidebar">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+          <!-- Left Column -->
+          <div class="footer-section logo-section">
+            <img src="path_to_logo.png" alt="Logo">
+            <h2>MESSOLD</h2>
+            <p>The art of gifting</p>
+            <div class="social-icons">
+              <a href="https://www.messold.com/" target="_blank">Facebook</a>
+              <a href="https://www.messold.com/" target="_blank">Instagram</a>
+            </div>
+          </div>
+          
+          <!-- Information Column -->
+          <div class="footer-section">
+            <h3>INFORMATION</h3>
+            <ul>
+              <li><a href="#">Track your Order</a></li>
+              <li><a href="#">Returns and Refunds</a></li>
+              <li><a href="#">Holiday List</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Aartis</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+      
+          <!-- About Column -->
+          <div class="footer-section">
+            <h3>ABOUT MESSOLD</h3>
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Corporate Enquiry</a></li>
+              <li><a href="#">Exchange/Cancel My Order</a></li>
+            </ul>
+          </div>
+      
+          <!-- Customer Care Column -->
+          <div class="footer-section">
+            <h3>CUSTOMER CARE</h3>
+            <p>Phone: +91 8010288882 | +91 8010188881</p>
+            <p>Email: <a href="mailto:souravbhardwaj5678@gmail.comn">souravbhardwaj5678@gmail.com</a></p>
+            <p>Address: Messold, Jagat Complex, 100 Ft Rd, Ghitorni, New Delhi 110030</p>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+            <a href="#">SOURCE CODE</a>
+          <p>© 2024 All Rights Reserved</p>
+        </div>
+      </footer>
+      
+
+    <script src="script.js"></script>
+</body>
+</html>

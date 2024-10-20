@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .products {
+            padding: 20px;
+        }
+        h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        .product-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .product-card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .product-card p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        .product-card button {
+            background-color: #28a745;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .cart-sidebar {
+            position: fixed;
+            right: -300px;
+            top: 0;
+            width: 300px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+            transition: right 0.3s;
+        }
+        .cart-header {
+            background-color: #28a745;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .cart-body {
+            padding: 15px;
+        }
+        .cart-body ul {
+            list-style: none;
+            padding: 0;
+        }
+        .cart-body ul li {
+            margin: 10px 0;
+        }
+        .cart-footer {
+            padding: 15px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .cart-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Products Section -->
+    <section class="products">
+        <!-- 1st Category -->
+        <h3>1st Category</h3>
+        <div class="product-grid">
+            <div class="product-card" data-id="1" data-name="Pooja Thali" data-price="15">
+                <img src="1.jpeg" alt="Pooja Thali">
+                <h3>Pooja Thali</h3>
+                <p>$15</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="2" data-name="prod2" data-price="50">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>prod2</h3>
+                <p>$50</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="3" data-name="prod3" data-price="12">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>prod3</h3>
+                <p>$12</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="4" data-name="prod4" data-price="34">
+                <img src="2.jpeg" alt="prod4">
+                <h3>prod4</h3>
+                <p>$34</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="5" data-name="prod5" data-price="44">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>prod5</h3>
+                <p>$44</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Add more products for this category -->
+        </div>
+
+        <!-- 2nd Category -->
+        <h3>2nd Category</h3>
+        <div class="product-grid">
+            <div class="product-card" data-id="6" data-name="prod6" data-price="15">
+                <img src="1.jpeg" alt="Pooja Thali">
+                <h3>prod6</h3>
+                <p>$15</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="7" data-name="prod7" data-price="5">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>prod7</h3>
+                <p>$5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="8" data-name="prod8" data-price="5">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>prod8</h3>
+                <p>$5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="9" data-name="prod9" data-price="5">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>prod9</h3>
+                <p>$5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="10" data-name="prod10" data-price="5">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>prod10</h3>
+                <p>$5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Add more products for this category -->
+        </div>
+        <!-- 3rd Category -->
+        <h3>3rd Category</h3>
+        <div class="product-grid">
+            <div class="product-card" data-id="11" data-name="prod11" data-price="15">
+                <img src="1.jpeg" alt="Pooja Thali">
+                <h3>prod11</h3>
+                <p>$15</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="12" data-name="prod12" data-price="22">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>prod12</h3>
+                <p>$22</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="13" data-name="prod13" data-price="15">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>prod13</h3>
+                <p>$15</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="14" data-name="prod14" data-price="52">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>prod14</h3>
+                <p>$52</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="15" data-name="prod15" data-price="54">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>prod15</h3>
+                <p>$54</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Add more products for this category -->
+        </div>
+
+         <!-- 3rd Category -->
+         <h3>4th Category</h3>
+         <div class="product-grid">
+             <div class="product-card" data-id="16" data-name="Prod16" data-price="15">
+                 <img src="1.jpeg" alt="Pooja Thali">
+                 <h3>prod16</h3>
+                 <p>$15</p>
+                 <button class="add-to-cart">Add to Cart</button>
+             </div>
+             <div class="product-card" data-id="17" data-name="Prod17" data-price="5">
+                 <img src="2.jpeg" alt="Incense Sticks">
+                 <h3>prod17</h3>
+                 <p>$5</p>
+                 <button class="add-to-cart">Add to Cart</button>
+             </div>
+             <div class="product-card" data-id="18" data-name="prod18" data-price="5">
+                 <img src="2.jpeg" alt="Incense Sticks">
+                 <h3>prod18</h3>
+                 <p>$5</p>
+                 <button class="add-to-cart">Add to Cart</button>
+             </div>
+             <div class="product-card" data-id="19" data-name="prod19" data-price="5">
+                 <img src="2.jpeg" alt="Incense Sticks">
+                 <h3>prod19</h3>
+                 <p>$5</p>
+                 <button class="add-to-cart">Add to Cart</button>
+             </div>
+             <div class="product-card" data-id="20" data-name="prod20" data-price="5">
+                 <img src="2.jpeg" alt="Incense Sticks">
+                 <h3>prod20</h3>
+                 <p>$5</p>
+                 <button class="add-to-cart">Add to Cart</button>
+             </div>
+             <!-- Add more products for this category -->
+         </div>
+
+          <!-- 3rd Category -->
+        <h2>5th Category</h2>
+        <div class="product-grid">
+            <div class="product-card" data-id="1" data-name="Pooja Thali" data-price="15">
+                <img src="1.jpeg" alt="Pooja Thali">
+                <h3>Pooja Thali</h3>
+                <p>$15</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="2" data-name="Incense Sticks" data-price="5">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>Incense Sticks</h3>
+                <p>$5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="2" data-name="Incense Sticks" data-price="5">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>Incense Sticks</h3>
+                <p>$5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="2" data-name="Incense Sticks" data-price="5">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>Incense Sticks</h3>
+                <p>$5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-id="2" data-name="Incense Sticks" data-price="5">
+                <img src="2.jpeg" alt="Incense Sticks">
+                <h3>Incense Sticks</h3>
+                <p>$5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Add more products for this category -->
+        </div>
+    </section>
+
+    <!-- Cart Sidebar (hidden) -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button id="close-cart">&times;</button>
+        </div>
+        <div class="cart-body">
+            <ul id="cart-items-sidebar"></ul>
+        </div>
+        <div class="cart-footer">
+            <div>Total: $<span id="total-amount-sidebar">0</span></div>
+            <button id="checkout-sidebar">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 MyPoojaBox. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Script to handle adding items to the cart and showing sidebar
+        const cartSidebar = document.getElementById('cart-sidebar');
+        const cartOverlay = document.getElementById('cart-overlay');
+        const closeCartButton = document.getElementById('close-cart');
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        const cartItemsSidebar = document.getElementById('cart-items-sidebar');
+        const totalAmountSidebar = document.getElementById('total-amount-sidebar');
+
+        let cart = [];
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const productCard = button.closest('.product-card');
+                const productName = productCard.getAttribute('data-name');
+                const productPrice = parseFloat(productCard.getAttribute('data-price'));
+
+                cart.push({ name: productName, price: productPrice });
+                updateCart();
+                showCartSidebar();
+            });
+        });
+
+        closeCartButton.addEventListener('click', () => {
+            hideCartSidebar();
+        });
+
+        cartOverlay.addEventListener('click', () => {
+            hideCartSidebar();
+        });
+
+        function updateCart() {
+            cartItemsSidebar.innerHTML = '';
+            let total = 0;
+
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - $${item.price}`;
+                cartItemsSidebar.appendChild(li);
+                total += item.price;
+            });
+
+            totalAmountSidebar.textContent = total.toFixed(2);
+        }
+
+        function showCartSidebar() {
+            cartSidebar.style.right = '0';
+            cartOverlay.style.display = 'block';
+        }
+
+        function hideCartSidebar() {
+            cartSidebar.style.right = '-300px';
+            cartOverlay.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
